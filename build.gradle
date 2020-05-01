@@ -1,0 +1,35 @@
+/********** Applying Plugin *************/
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+/********** buildscript *************/
+buildscript {
+            ext {
+                        version = '2.0.1.RELEASE'
+            }
+            repositories {
+                        mavenCentral()
+            }
+            dependencies {
+                        
+            }
+}
+
+repositories {
+      mavenCentral()
+  }
+
+sourceCompatibility = 1.7
+group = 'com.java.design.pattern'
+version = '0.0.1-SNAPSHOT'
+
+println "Starting Building Project:"+project.name
+
+jar
+{
+baseName=project.name
+
+}
+
+
+  
